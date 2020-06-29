@@ -1,1 +1,1 @@
-# Software-Testing-Blog
+# Software-Test-Automation-Blog
