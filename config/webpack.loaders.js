@@ -102,11 +102,14 @@ const imageLoader = {
       optimizationLevel: 7,
     },
     pngquant: {
-      quality: '65-90',
+      quality: [0.65, 0.90],
       speed: 4,
     },
     mozjpeg: {
       progressive: true,
+    },
+    webp: {
+      quality: 75
     },
   },
 };
@@ -115,7 +118,7 @@ const images = {
   test: /\.(gif|png|jpe?g|svg)$/i,
   exclude: /fonts/,
   use: [
-    'file-loader?name=images/[name].[hash].[ext]',
+    'file-loader?name=assets/images/[name].[hash].[ext]',
     config.env === 'production' ? imageLoader : null,
   ].filter(Boolean),
 };
@@ -129,7 +132,7 @@ const fonts = {
       loader: 'file-loader',
       query: {
         name: '[name].[hash].[ext]',
-        outputPath: 'fonts/',
+        outputPath: 'assets/fonts/',
       },
     },
   ],
@@ -143,7 +146,7 @@ const videos = {
       loader: 'file-loader',
       query: {
         name: '[name].[hash].[ext]',
-        outputPath: 'images/',
+        outputPath: 'assets/videos/',
       },
     },
   ],

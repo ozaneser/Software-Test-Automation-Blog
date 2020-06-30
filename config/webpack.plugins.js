@@ -72,6 +72,8 @@ const favicons = new FaviconsWebpackPlugin({
     appDescription: config.site_description,
     developerName: null,
     developerURL: null,
+    lang: "tr-TR",
+    start_url: "/?homescreen=1",
     icons: {
       android: true,
       appleIcon: true,
@@ -87,7 +89,7 @@ const favicons = new FaviconsWebpackPlugin({
 
 // Webpack bar
 const webpackBar = new WebpackBar({
-  color: '#ff6469',
+  color: '#2880A0',
 });
 
 module.exports = [

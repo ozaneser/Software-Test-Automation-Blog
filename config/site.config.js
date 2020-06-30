@@ -12,7 +12,7 @@ const config = {
   viewport: 'width=device-width,initial-scale=1',
 
   // Your website's description, used for favicon meta tags
-  site_description: 'A modern boilerplate for static website development',
+  site_description: 'Software test automation blog',
 
   // Source file for favicon generation. 512x512px recommended.
   favicon: path.join(ROOT, '/src/assets/favicon.png'),

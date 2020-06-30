@@ -1,3 +1,9 @@
 @import 'modules/all';
 @import 'partials/base';
 @import 'vendor/other';
+
+img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
