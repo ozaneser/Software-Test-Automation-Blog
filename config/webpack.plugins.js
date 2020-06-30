@@ -66,7 +66,7 @@ const generateHTMLPlugins = () => glob.sync('./src/**/*.html').map((dir) => {
 // Favicons
 const favicons = new FaviconsWebpackPlugin({
   logo: config.favicon,
-  prefix: 'images/favicons/',
+  prefix: 'assets/',
   favicons: {
     appName: config.site_name,
     appDescription: config.site_description,
