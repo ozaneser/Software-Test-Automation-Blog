@@ -1,5 +1,3 @@
-# TABLE OF CONTENTS 
-
 - [ABOUT PROJECT](#about-project)
   * [Features](#features)
   * [Browser Support](#browser-support)
@@ -40,10 +38,12 @@
     + [.editorconfig](#editorconfig)
     + [.eslintrc.js](#eslintrcjs)
     + [.stylelintrc.js](#stylelintrcjs)
+    + [.prettierrc.js](#prettierrcjs)
+    + [.prettierignore](#prettierignore)
 - [ADVANCED USAGE](#advanced-usage)
   * [Configuration Variables](#configuration-variables)
   * [Webpack Configuration](#webpack-configuration)
-
+  
 # ABOUT PROJECT
 
 This project includes automated build processes, a local development server, production minification and optimizations, and the latest standards for static websites.
@@ -287,6 +287,14 @@ Repository includes a project-level `.eslintrc.js` and uses `airbnb-base` config
 ### .stylelintrc.js
 
 Repository includes a project-level `.stylelintrc.js` and uses `stylelint-config-standard` configuration. Stylelint is a tool that reports bad code in your CSS files. It helps to enforce the consistent code and prevents you from making errors in your stylesheets.
+
+### .prettierrc.js
+
+Repository includes a project-level `.prettierrc.js` configuration. Prettier is an opinionated code formatter. It enforces a consistent style by parsing your code and re-printing it with its own rules that take the maximum line length into account, wrapping code when necessary.
+
+### .prettierignore
+
+Repository includes a project-level `.prettierignore`. This is primarily used to exclude markdown files from formatting.
 
 # ADVANCED USAGE
 
