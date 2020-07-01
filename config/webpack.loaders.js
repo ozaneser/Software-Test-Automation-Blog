@@ -1,10 +1,10 @@
 /* eslint-disable global-require */
 /* eslint-disable import/no-extraneous-dependencies */
-import { loader as _loader } from 'mini-css-extract-plugin';
-import { env } from './site.config';
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const config = require('./site.config');
 
 // Define common loader constants
-const sourceMap = env !== 'production';
+const sourceMap = config.env !== 'production';
 
 // HTML loaders
 const html = {
@@ -56,7 +56,7 @@ const postcssLoader = {
 const css = {
   test: /\.css$/,
   use: [
-    env === 'production' ? _loader : styleLoader,
+    config.env === 'production' ? MiniCssExtractPlugin.loader : styleLoader,
     cssLoader,
     postcssLoader,
   ],
@@ -65,7 +65,7 @@ const css = {
 const sass = {
   test: /\.s[c|a]ss$/,
   use: [
-    env === 'production' ? _loader : styleLoader,
+    config.env === 'production' ? MiniCssExtractPlugin.loader : styleLoader,
     cssLoader,
     postcssLoader,
     {
@@ -80,7 +80,7 @@ const sass = {
 const less = {
   test: /\.less$/,
   use: [
-    env === 'production' ? _loader : styleLoader,
+    config.env === 'production' ? MiniCssExtractPlugin.loader : styleLoader,
     cssLoader,
     postcssLoader,
     {
@@ -121,7 +121,7 @@ const images = {
   exclude: /fonts/,
   use: [
     'file-loader?name=assets/images/[name].[hash].[ext]',
-    env === 'production' ? imageLoader : null,
+    config.env === 'production' ? imageLoader : null,
   ].filter(Boolean),
 };
 
@@ -154,7 +154,7 @@ const videos = {
   ],
 };
 
-export default [
+module.exports = [
   html,
   js,
   css,
