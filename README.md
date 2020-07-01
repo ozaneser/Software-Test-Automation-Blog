@@ -325,7 +325,7 @@ const config = {
 
 ## Webpack Configuration
 
-Repository includes [config/webpack.config.js], you can configure config file your needings.
+Repository includes [config/webpack.config.js], you can configure config file as your needs.
 
 [Bug reports]: <https://github.com/ozaneser/Software-Test-Automation-Blog/blob/master/.github/ISSUE_TEMPLATE/bug_report.md>
 [Feature requests]: <https://github.com/ozaneser/Software-Test-Automation-Blog/blob/master/.github/ISSUE_TEMPLATE/feature_request.md>
