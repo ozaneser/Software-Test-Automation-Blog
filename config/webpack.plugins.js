@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 const webpack = require('webpack');
 const cssnano = require('cssnano');
 const glob = require('glob');
@@ -72,8 +73,8 @@ const favicons = new FaviconsWebpackPlugin({
     appDescription: config.site_description,
     developerName: null,
     developerURL: null,
-    lang: "tr-TR",
-    start_url: "/?homescreen=1",
+    lang: 'tr-TR',
+    start_url: '/?homescreen=1',
     icons: {
       android: true,
       appleIcon: true,
