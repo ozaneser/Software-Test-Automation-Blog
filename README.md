@@ -254,7 +254,7 @@ For best practices on a file structure for your CSS, refer to the article below:
 
 Repository includes a single JavaScript file located in the src/jscripts/ directory:
 
-- [main.js] - By default, no JavaScript code is included as this boilerplate makes no assumptions as to how you should write your JavaScript.
+- [main.js] - By default, no JavaScript code is included as this repository makes no assumptions as to how you should write your JavaScript.
 
 ### Writing ES6
 
