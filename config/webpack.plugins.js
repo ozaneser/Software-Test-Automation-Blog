@@ -48,21 +48,22 @@ const cssExtract = new MiniCssExtractPlugin({
 
 // HTML generation
 const paths = [];
-const generateHTMLPlugins = () => glob.sync('./src/**/*.html').map((dir) => {
-  const filename = path.basename(dir);
+const generateHTMLPlugins = () =>
+  glob.sync('./src/**/*.html').map((dir) => {
+    const filename = path.basename(dir);
 
-  if (filename !== '404.html') {
-    paths.push(filename);
-  }
+    if (filename !== '404.html') {
+      paths.push(filename);
+    }
 
-  return new HTMLWebpackPlugin({
-    filename,
-    template: path.join(config.root, config.paths.src, filename),
-    meta: {
-      viewport: config.viewport,
-    },
+    return new HTMLWebpackPlugin({
+      filename,
+      template: path.join(config.root, config.paths.src, filename),
+      meta: {
+        viewport: config.viewport,
+      },
+    });
   });
-});
 
 // Favicons
 const favicons = new FaviconsWebpackPlugin({

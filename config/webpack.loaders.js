@@ -46,9 +46,7 @@ const cssLoader = {
 const postcssLoader = {
   loader: 'postcss-loader',
   options: {
-    plugins: [
-      require('autoprefixer')(),
-    ],
+    plugins: [require('autoprefixer')()],
     sourceMap,
   },
 };
@@ -104,7 +102,7 @@ const imageLoader = {
       optimizationLevel: 7,
     },
     pngquant: {
-      quality: [0.65, 0.90],
+      quality: [0.65, 0.9],
       speed: 4,
     },
     mozjpeg: {
@@ -154,13 +152,4 @@ const videos = {
   ],
 };
 
-module.exports = [
-  html,
-  js,
-  css,
-  sass,
-  less,
-  images,
-  fonts,
-  videos,
-];
+module.exports = [html, js, css, sass, less, images, fonts, videos];

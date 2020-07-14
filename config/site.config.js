@@ -31,9 +31,7 @@ const config = {
     src: 'src',
     dist: 'dist',
   },
-  package: JSON.parse(
-    fs.readFileSync(path.join(ROOT, '/package.json'), { encoding: 'utf-8' }),
-  ),
+  package: JSON.parse(fs.readFileSync(path.join(ROOT, '/package.json'), { encoding: 'utf-8' })),
 };
 
 module.exports = config;
