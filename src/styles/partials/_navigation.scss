@@ -1,0 +1,43 @@
+$navBorderBottomColor: grey;
+$navItemsColor: gray;
+$navItemsHoverColor: black;
+$navItemsActiveColor: black;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $navBorderBottomColor;
+
+  img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+
+    a {
+      color: $navItemsColor;
+      text-align: center;
+      padding: 12px;
+      text-decoration: none;
+      font-size: 18px;
+      line-height: 25px;
+
+      &:hover {
+        color: $navItemsHoverColor;
+        text-decoration: none;
+      }
+
+      &.active {
+        color: $navItemsActiveColor;
+        font-weight: bold;
+      }
+    }
+  }
+}

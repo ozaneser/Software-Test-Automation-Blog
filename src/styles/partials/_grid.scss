@@ -1,0 +1,42 @@
+//container
+//container-fluid
+//row
+//col-*
+//col-sm
+//col-md
+//col-lg
+//col-xl
+@import 'modules/utility';
+
+$grid-columns: 12;
+
+@mixin create-col-classes($modifier, $grid-columns, $breakpoint) {
+  @include create-media-query($breakpoint) {
+    @for $i from 1 through $grid-columns {
+      .col#{$modifier}-#{$i} {
+        flex-basis: (100 / ($grid-columns / $i)) * 1%;
+      }
+    }
+  }
+}
+
+.container {
+  max-width: $breakpoint-xl * 1px;
+  margin: 0 auto;
+  padding: 10px;
+
+  &--fluid {
+    margin: 0;
+    max-width: 100%;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+@each $modifier, $breakpoint in $grid-props {
+  @include create-col-classes($modifier, $grid-columns, $breakpoint);
+}

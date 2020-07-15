@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap');
+
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$blue: #0d6efd !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #d63384 !default;
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #198754 !default;
+$teal: #20c997 !default;
+$cyan: #0dcaf0 !default;
+
+$primary: $blue !default;
+$secondary: $gray-600 !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: $gray-100 !default;
+$dark: $gray-800 !default;
+
+$breakpoint-sm: 576;
+$breakpoint-md: 768;
+$breakpoint-lg: 992;
+$breakpoint-xl: 1200;
+
+$grid-props: (
+  '': 0,
+  '-sm': $breakpoint-sm,
+  '-md': $breakpoint-md,
+  '-lg': $breakpoint-lg,
+  '-xl': $breakpoint-xl,
+);
+
+$spacer: 0.25rem !default;
+$spacers: () !default;
+
+$display-group: none, inline, inline-block, block, table, table-cell, table-row, flex, inline-flex;
+
+$text-align-group: left, right, center, justify;
+
+$flex-direction-group: row, row-reverse, column, column-reverse;
+
+$justify-content-group: start, end, center, between, around;
+
+$align-items-group: start, end, center, baseline, stretch;
+
+$align-self-group: start, end, center, baseline, stretch;
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif: 'Montserrat', sans-serif !default;
+// stylelint-enable value-keyword-case
+
+$font-family-base: $font-family-sans-serif !default;
+$font-family-code: var(--bs-font-monospace) !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+$font-weight-bolder: bolder !default;
+$font-weight-base: $font-weight-normal !default;
+$line-height-base: 1.5 !default;
+
+$body-bg: $white !default;
+$body-color: $gray-900 !default;
+$body-text-align: null !default;
+
+$font-size-root: null !default;
+$font-size-base: 1rem !default;
+$text-muted: $gray-600 !default;
+
+$h1-font-size: $font-size-base * 2.5 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.75 !default;
+$h4-font-size: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base !default;
+
+$headings-margin-bottom: $spacer / 2 !default;
+$headings-font-family: null !default;
+$headings-font-style: null !default;
+$headings-font-weight: 500 !default;
+$headings-line-height: 1.2 !default;
+$headings-color: null !default;
+
+$paragraph-margin-bottom: 1rem !default;
+
+$small-font-size: 0.875em !default;
+
+$legend-margin-bottom: 0.5rem !default;
+$legend-font-size: 1.5rem !default;
+$legend-font-weight: null !default;
+
+//Links
+$link-color: $primary !default;
+$link-decoration: underline !default;
+$link-hover-color: darken($link-color, 15%) !default;
+$link-hover-decoration: null !default;
+
+// Code
+
+$code-font-size: $small-font-size !default;
+$code-color: $pink !default;
+
+$kbd-padding-y: 0.2rem !default;
+$kbd-padding-x: 0.4rem !default;
+$kbd-font-size: $code-font-size !default;
+$kbd-color: $white !default;
+$kbd-bg: $gray-900 !default;
+
+$pre-color: null !default;
+
+$border-width: 1px !default;
+$border-color: $gray-300 !default;
+$border-radius: 0.25rem !default;
+$border-radius-sm: 0.2rem !default;
+$border-radius-lg: 0.3rem !default;
+$border-radius-sm: 0.2rem !default;
+$btn-border-radius-sm: $border-radius-sm !default;
+
+$enable-rounded: true !default;
+$nested-kbd-font-weight: $font-weight-bold !default;
+
+$table-cell-padding-y: 0.5rem !default;
+$table-cell-padding-x: 0.5rem !default;
+$table-cell-padding-y-sm: 0.25rem !default;
+$table-cell-padding-x-sm: 0.25rem !default;
+
+$table-cell-vertical-align: top !default;
+
+$table-color: $body-color !default;
+$table-bg: transparent !default;
+
+$table-th-font-weight: null !default;
+
+$table-striped-color: $table-color !default;
+$table-striped-bg-factor: 0.05 !default;
+$table-striped-bg: rgba($black, $table-striped-bg-factor) !default;
+
+$table-active-color: $table-color !default;
+$table-active-bg-factor: 0.1 !default;
+$table-active-bg: rgba($black, $table-active-bg-factor) !default;
+
+$table-hover-color: $table-color !default;
+$table-hover-bg-factor: 0.075 !default;
+$table-hover-bg: rgba($black, $table-hover-bg-factor) !default;
+
+$table-border-factor: 0.1 !default;
+$table-border-width: $border-width !default;
+$table-border-color: $border-color !default;
+
+$table-striped-order: odd !default;
+
+$table-group-separator-color: currentColor !default;
+
+$table-caption-color: $text-muted !default;
+
+$table-bg-level: -9 !default;
+
+$table-variants: (
+  'primary': color-level($primary, $table-bg-level),
+  'secondary': color-level($secondary, $table-bg-level),
+  'success': color-level($success, $table-bg-level),
+  'info': color-level($info, $table-bg-level),
+  'warning': color-level($warning, $table-bg-level),
+  'danger': color-level($danger, $table-bg-level),
+  'light': $light,
+  'dark': $dark,
+) !default;
+// scss-docs-end table-variables
+
+$enable-button-pointers: true !default;
