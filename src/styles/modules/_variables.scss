@@ -54,7 +54,7 @@ $text-align-group: left, right, center, justify;
 
 $flex-direction-group: row, row-reverse, column, column-reverse;
 
-$justify-content-group: start, end, center, between, around;
+$justify-content-group: start, end, center, space-between, space-around;
 
 $align-items-group: start, end, center, baseline, stretch;
 
@@ -181,3 +181,12 @@ $table-variants: (
 // scss-docs-end table-variables
 
 $enable-button-pointers: true !default;
+
+$post-container: 1200px;
+$post-lg-container: 1024px;
+$post-sm-container: 800px;
+$dimension-one: 225px;
+$dimension-two: 400px;
+$dimension-three: 525px;
+$margin-value: 1rem;
+$padding-value: 1rem;

@@ -1,0 +1,79 @@
+.blog-posts {
+  display: flex;
+  flex-flow: row wrap;
+  background-color: #fff;
+  border-radius: 3px;
+  max-width: $post-container;
+  margin: 40px auto;
+
+  .post {
+    margin: $margin-value;
+    border-radius: 10px;
+    color: white;
+    padding: $padding-value;
+    box-shadow: 8px 8px 12px grey;
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    &:not(:first-child):not(:last-child) {
+      height: $dimension-two;
+      width: $dimension-one;
+    }
+
+    &:first-child,
+    &:last-child {
+      height: $dimension-one;
+      width: $dimension-three;
+
+      h4 {
+        width: 50%;
+      }
+    }
+
+    &:nth-last-of-type(-n + 3):not(:last-child) {
+      //margin-top: -184px;
+      margin-top: calc((((#{$dimension-two}) - (#{$dimension-one})) - (#{$margin-value})) * -1);
+    }
+
+    button {
+      border: none;
+      border-radius: 0.35rem;
+      font-size: 12px;
+      font-weight: bolder;
+      background-color: white;
+    }
+
+    .post-content {
+      font-size: 11px;
+    }
+  }
+}
+
+@media screen and (max-width: $post-container) {
+  .blog-posts {
+    max-width: $post-sm-container;
+
+    .post {
+      &:nth-last-of-type(-n + 3):not(:last-child) {
+        margin: $margin-value;
+      }
+
+      &:first-child,
+      &:last-child {
+        h4 {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $post-lg-container) {
+  .post {
+    &:not(:first-child):not(:last-child) {
+      flex: 1 1 calc(50% - ((#{$margin-value} * 2)));
+    }
+  }
+}
