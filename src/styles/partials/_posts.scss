@@ -1,3 +1,7 @@
+div.container p:first-of-type {
+  width: 32%;
+}
+
 .blog-posts {
   display: flex;
   flex-flow: row wrap;
@@ -73,7 +77,19 @@
 @media screen and (max-width: $post-lg-container) {
   .post {
     &:not(:first-child):not(:last-child) {
-      flex: 1 1 calc(50% - ((#{$margin-value} * 2)));
+      flex-basis: calc(50% - ((#{$margin-value} + #{$padding-value}) * 2));
+    }
+  }
+
+  div.container p:first-of-type {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: $post-xs-container) {
+  .post {
+    &:not(:first-child):not(:last-child) {
+      flex-basis: 100%;
     }
   }
 }
