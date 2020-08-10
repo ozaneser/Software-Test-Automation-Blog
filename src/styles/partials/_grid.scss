@@ -20,6 +20,14 @@ $grid-columns: 12;
   }
 }
 
+@mixin create-container-classes($breakpoint) {
+  @include create-media-query($breakpoint) {
+    .container {
+      max-width: ($breakpoint) * 1px;
+    }
+  }
+}
+
 .container {
   max-width: $breakpoint-xl * 1px;
   margin: 0 auto;
@@ -39,4 +47,10 @@ $grid-columns: 12;
 
 @each $modifier, $breakpoint in $grid-props {
   @include create-col-classes($modifier, $grid-columns, $breakpoint);
+}
+
+@each $modifier, $breakpoint in $grid-props {
+  @if ($breakpoint != 0) {
+    @include create-container-classes($breakpoint);
+  }
 }

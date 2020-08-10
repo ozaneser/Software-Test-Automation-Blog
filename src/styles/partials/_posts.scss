@@ -1,13 +1,8 @@
-div.container p:first-of-type {
-  width: 32%;
-}
-
 .blog-posts {
   display: flex;
   flex-flow: row wrap;
   background-color: #fff;
   border-radius: 3px;
-  max-width: $post-container;
   margin: 40px auto;
 
   .post {
@@ -44,21 +39,15 @@ div.container p:first-of-type {
     button {
       border: none;
       border-radius: 0.35rem;
-      font-size: 12px;
+      font-size: font-size(1rem);
       font-weight: bolder;
       background-color: white;
-    }
-
-    .post-content {
-      font-size: 11px;
     }
   }
 }
 
-@media screen and (max-width: $post-container) {
+@media screen and (min-width: ($breakpoint-sm) * 1.0001px) and (max-width: ($breakpoint-xl) * 1.0001px) {
   .blog-posts {
-    max-width: $post-sm-container;
-
     .post {
       &:nth-last-of-type(-n + 3):not(:last-child) {
         margin: $margin-value;
@@ -66,30 +55,29 @@ div.container p:first-of-type {
 
       &:first-child,
       &:last-child {
-        h4 {
-          width: 100%;
-        }
+        flex-basis: 100%;
+      }
+
+      &:not(:first-child):not(:last-child) {
+        flex-basis: calc(50% - ((#{$margin-value} + #{$padding-value}) * 2));
       }
     }
   }
 }
 
-@media screen and (max-width: $post-lg-container) {
-  .post {
-    &:not(:first-child):not(:last-child) {
-      flex-basis: calc(50% - ((#{$margin-value} + #{$padding-value}) * 2));
-    }
-  }
-
-  div.container p:first-of-type {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: $post-xs-container) {
-  .post {
+@media screen and (max-width: ($breakpoint-sm) * 1px) {
+  .blog-posts .post {
     &:not(:first-child):not(:last-child) {
       flex-basis: 100%;
+    }
+
+    &:first-child,
+    &:last-child {
+      height: $dimension-two;
+    }
+
+    &:nth-last-of-type(-n + 3):not(:last-child) {
+      margin: $margin-value;
     }
   }
 }

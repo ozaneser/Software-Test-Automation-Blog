@@ -4,8 +4,12 @@
 @mixin create-media-query($breakpoint) {
   @if ($breakpoint == 0) {
     @content;
+  } @else if ($breakpoint <= 576 & $breakpoint > 0) {
+    @media screen and (max-width: $breakpoint * 1px) {
+      @content;
+    }
   } @else {
-    @media screen and (min-width: $breakpoint *1px) {
+    @media screen and (min-width: $breakpoint * 1px) {
       @content;
     }
   }
