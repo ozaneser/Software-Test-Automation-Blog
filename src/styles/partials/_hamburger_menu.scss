@@ -1,0 +1,121 @@
+.hamburger-icon {
+  display: none;
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  color: black;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 2;
+
+  &.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+  }
+
+  &.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+    background: white;
+  }
+
+  &.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+    background: white;
+  }
+
+  .menu-btn__burger {
+    width: 50px;
+    height: 6px;
+    background: black;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+    transition: all 0.5s ease-in-out;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 6px;
+      background: black;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+      transition: all 0.5s ease-in-out;
+    }
+
+    &::before {
+      transform: translateY(-16px);
+    }
+
+    &::after {
+      transform: translateY(16px);
+    }
+  }
+}
+
+@media screen and (max-width: ($breakpoint-md) * 1px) {
+  .hamburger-icon {
+    display: inline-block;
+  }
+
+  .mobile-nav {
+    height: 60%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    bottom: 4rem;
+    right: 2rem;
+    background-color: #0c3b6a;
+    overflow-x: hidden;
+    transition: 0.5s;
+    border-radius: 0.5rem;
+    box-shadow: -8px 3px 25px #0c3b5a;
+
+    .mobile-menu {
+      list-style-type: none;
+
+      li a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #fff;
+        display: block;
+        transition: 0.3s;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: ($breakpoint-sm) * 1px) {
+  .hamburger-icon {
+    right: 0.5rem;
+    bottom: 1rem;
+
+    .menu-btn__burger {
+      width: 40px;
+      height: 5px;
+
+      &::before,
+      &::after {
+        width: 40px;
+        height: 5px;
+      }
+    }
+  }
+
+  .mobile-nav {
+    width: 80%;
+    height: 50%;
+
+    .mobile-menu {
+      list-style-type: none;
+
+      li a {
+        font-size: 18px;
+      }
+    }
+  }
+}

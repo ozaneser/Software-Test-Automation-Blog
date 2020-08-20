@@ -41,3 +41,17 @@ $navItemsActiveColor: black;
     }
   }
 }
+
+@media screen and (max-width: ($breakpoint-md) * 1px) {
+  .navbar {
+    justify-content: center;
+
+    .nav-menu {
+      display: none;
+    }
+
+    .nav-user {
+      display: none;
+    }
+  }
+}

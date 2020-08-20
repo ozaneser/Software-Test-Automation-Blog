@@ -3,10 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Simple Blog</title>
   </head>
 
   <body>
+    <div class="hamburger-icon" id="mobile-menu-icon">
+      <div class="menu-btn__burger"></div>
+    </div>
+
+    <div class="mobile-nav d-none" id="mobile-nav">
+      <ul class="mobile-menu mt-4">
+        <li><a href="#" class="hamburger-items">World</a></li>
+        <li><a href="#" class="hamburger-items">Sport</a></li>
+        <li><a href="#" class="hamburger-items">Opinion</a></li>
+        <li><a href="#" class="hamburger-items">Lifestyle</a></li>
+        <li><a href="#" class="hamburger-items">Business</a></li>
+        <li><a href="#" class="hamburger-items">Culture</a></li>
+        <li><a href="#" class="hamburger-items">Fashion</a></li>
+        <li><a href="#" class="hamburger-items">Tech</a></li>
+      </ul>
+    </div>
+
     <header>
       <nav class="container navbar">
         <a href="index.html" class="nav-logo">
@@ -105,6 +126,72 @@
       </div>
     </div>
 
-    <script src="scripts/main.js"></script>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row pt-3">
+          <div class="col-6 col-lg-12 col-md-12 col-sm-12 pr-6">
+            <h6>Hakkımızda</h6>
+            <p class="ml-0">
+              YazilimTestOtomasyonu.com
+              <strong>Yazılım Test Yaklaşımları ve Otomasyonu </strong>hakkında bilinmesi
+              gerekenlerin doğru adresi.
+            </p>
+          </div>
+
+          <div class="col-3 col-lg-12 col-md-12 col-sm-12">
+            <h6>Kategoriler</h6>
+            <ul class="footer-links">
+              <li><a href="#">Yazılım Testi</a></li>
+              <li><a href="#">Jmeter</a></li>
+              <li><a href="#">Postman</a></li>
+              <li><a href="#">Cucumber</a></li>
+              <li><a href="#">SOAP UI</a></li>
+            </ul>
+          </div>
+
+          <div class="col-3 col-lg-12 col-md-12 col-sm-12">
+            <h6>Hızlı Erişimler</h6>
+            <ul class="footer-links">
+              <li><a href="#">Yazarlarımız</a></li>
+              <li><a href="#">Bize Ulaşın</a></li>
+              <li><a href="#">Kaynaklar</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row pt-3">
+          <div class="col-6 col-lg-12 col-md-12 col-sm-12 pr-8">
+            <p class="copyright-text ml-0">
+              Copyright &copy; 2020 All Rights Reserved by YazilimTestOtomasyonu.com
+            </p>
+          </div>
+
+          <div class="col-3 col-lg-12 col-md-12 col-sm-12">
+            <ul class="social-icons">
+              <li>
+                <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+              </li>
+              <li>
+                <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+              </li>
+              <li>
+                <a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a>
+              </li>
+              <li>
+                <a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-3 col-lg-12 col-md-12 col-sm-12" id="subscribe-footer">
+            <form action="">
+              <div class="input-field">
+                <input type="text" id="email" required />
+                <label for="name">Email:</label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

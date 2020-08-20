@@ -1,0 +1,128 @@
+.site-footer {
+  background-color: #fff;
+  color: white;
+
+  .container {
+    .row:first-child {
+      border-bottom: 1px solid grey;
+      border-top: 1px solid grey;
+      background-color: #fff;
+    }
+
+    .row:last-child {
+      background-color: #fff;
+      align-items: baseline;
+    }
+
+    p:first-of-type {
+      color: #000;
+    }
+
+    h6 {
+      color: #000;
+      text-transform: uppercase;
+      margin-top: 0.25rem;
+      letter-spacing: 2px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    a:active,
+    a:focus,
+    a:hover {
+      color: #1ac6ca;
+      text-decoration: none;
+    }
+
+    .social-icons {
+      li {
+        display: inline-block;
+      }
+
+      a {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        margin-left: 6px;
+        margin-right: 0;
+        border-radius: 100%;
+        background-color: #33353d;
+        font-size: 16px;
+        display: inline-block;
+        text-align: center;
+        color: #fff;
+      }
+
+      a.facebook {
+        background-color: #3b5998;
+      }
+
+      a.twitter {
+        background-color: #00aced;
+      }
+
+      a.linkedin {
+        background-color: #007bb6;
+      }
+
+      a.dribbble {
+        background-color: #ea4c89;
+      }
+    }
+
+    .row:last-child #subscribe-footer {
+      form {
+        .input-field {
+          position: relative;
+          width: 250px;
+          height: 44px;
+          line-height: 44px;
+
+          label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            color: #d3d3d3;
+            transition: 0.2s all;
+            cursor: text;
+          }
+
+          input {
+            width: 100%;
+            border: 0;
+            outline: 0;
+            padding: 0.5rem 0;
+            border-bottom: 2px solid #d3d3d3;
+            box-shadow: none;
+            color: #111;
+          }
+
+          input:invalid {
+            outline: 0;
+          }
+
+          input:focus,
+          input:valid {
+            border-color: #1ac6ca;
+          }
+
+          input:focus ~ label,
+          input:valid ~ label {
+            font-size: 14px;
+            top: -24px;
+            color: #1ac6ca;
+          }
+        }
+      }
+    }
+  }
+}
