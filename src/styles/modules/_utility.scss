@@ -16,7 +16,7 @@
 }
 /* stylelint-enable */
 
-@for $i from 0 through 8 {
+@for $i from 0 through 16 {
   $spacers: map-merge(
     $spacers,
     (

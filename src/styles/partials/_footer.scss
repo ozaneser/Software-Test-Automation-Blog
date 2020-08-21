@@ -11,7 +11,7 @@
 
     .row:last-child {
       background-color: #fff;
-      align-items: baseline;
+      align-items: center;
     }
 
     p:first-of-type {
@@ -43,6 +43,8 @@
     }
 
     .social-icons {
+      margin: 0;
+
       li {
         display: inline-block;
       }
@@ -81,26 +83,12 @@
     .row:last-child #subscribe-footer {
       form {
         .input-field {
-          position: relative;
-          width: 250px;
-          height: 44px;
-          line-height: 44px;
-
-          label {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            color: #d3d3d3;
-            transition: 0.2s all;
-            cursor: text;
-          }
+          display: flex;
 
           input {
             width: 100%;
             border: 0;
             outline: 0;
-            padding: 0.5rem 0;
             border-bottom: 2px solid #d3d3d3;
             box-shadow: none;
             color: #111;
@@ -124,5 +112,23 @@
         }
       }
     }
+
+    button {
+      background-color: #1ac6ca;
+      border: none;
+      color: white;
+      padding: 0.5rem;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: ($breakpoint-md) * 1px) {
+  .input-field {
+    margin-top: 1.25rem;
   }
 }
